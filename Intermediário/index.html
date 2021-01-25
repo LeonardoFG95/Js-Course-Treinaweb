@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="number" id="cols" placeholder="Cols"><br>
+    <input type="number" id="rows" placeholder="Rows">
+    <button onclick="startField()">Start</button>
+    <br><br>
+    
+    <table id="myTable"></table>
+
+    <style>
+        table, td, tr {
+            border: 1px solid;
+        }
+        td {
+            width: 45px;
+            height: 45px;
+            text-align: center; 
+        }
+
+    </style>
+
+    <input type="checkbox" id="a" onclick="setState()">
+    <input type="checkbox" id="b" onclick="setState()">
+    <input type="checkbox" id="c" onclick="setState()">
+
+    <br><br>
+
+    <!-- Desafio controlando navegação de uma janela-->
+    <input type="url" id="myURL">
+    <button onclick="go()">Go</button>
+    <br><br>
+
+    <!-- Text box --> 
+    <input type="text" id="my-input">
+    <button onclick="document.querySelector('#my-input').focus()">Click Me</button>
+    <br><br>
+
+    <!-- Radio Buttons -->
+    <input type="radio" name="my-radio" id="a">
+    <input type="radio" name="my-radio" id="b">
+    <input type="radio" name="my-radio" id="c">
+    <br><br>
+
+    <!-- Select -->
+    <select name="" id="my-select">
+        <option value="1" id="a">A</option>
+        <option value="2" id="b">B</option>
+        <option value="3" id="c">C</option>
+    </select>
+    <br><br>
+
+    <!-- Lendo e salvando arquivos -->
+    <input type="file" id="myFile" accept=".txt" onchange="handleFileSelect()"><br>
+    <textarea id="fileContent"></textarea>
+    <br><br>
+
+    <!-- Desafio Salvando estado de um formulario  -->
+    <form name="myForm">
+        <input type="text" name="myText">
+        <select name="mySelect">
+            <option value="1">A</option>
+            <option value="2">B</option>
+            <option value="3">C</option>
+        </select>
+        <input type="checkbox" name="myCheck">
+    </form>
+
+    <br><br>
+
+    <button onclick="save()">Save</button>
+    <button onclick="load()">Load</button>
+
+    <br><br>
+
+    <div id="abc" class="def">ABC</div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./scripts.js"></script>
+    <script src="./field.js"></script>
+</body>
+</html>
